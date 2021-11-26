@@ -16,13 +16,21 @@ def show_operation(operation,num1,num2):
     elif operation == 4:
         logging.info(f"Dzielę {num1} oraz {num2}.")
     else:
-        logging.info("Nieznane działanie.")
+        logging.info('Nieznane działanie.')
 
+if __name__ == "__main__":
+    operation = int(input('Podaj działanie, posługując się odpowiednią liczbą: 1.Dodawanie, 2.Odejmowanie, 3.Mnożenie, '
+                          '4.Dzielenie: '))
+    num1 = int(input('Podaj pierwszą liczbę:'))
+    num2 = int(input('Podaj drugą liczbę:'))
 
-operation = int(input('Podaj działanie, posługując się odpowiednią liczbą: 1.Dodawanie, 2.Odejmowanie, 3.Mnożenie, '
-                      '4.Dzielenie: '))
-print("Następnie podaj liczby: ")
-num1 = int(input())
-num2 = int(input())
+    show_operation(operation, num1, num2)
 
-show_operation(operation,num1,num2)
+    if operation == 1:
+        print('Wynik to:', num1+num2)
+    elif operation == 2:
+        print('Wynik to:', num1-num2)
+    elif operation == 3:
+        print('Wynik to:', num1*num2)
+    elif operation == 4:
+        print('Wynik to:', num1/num2)
