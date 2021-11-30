@@ -31,7 +31,7 @@ def check_input_type(user_input):
     Checks if provided value is an integer.
     Takes users input as an argument.
     """
-    if user_input.isdigit():
+    if type(user_input):
         pass
     else:
         print('Podana wartość musi być liczbą!')
